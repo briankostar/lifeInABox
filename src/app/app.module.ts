@@ -6,13 +6,19 @@ import { RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { LifeInABoxComponent } from './life-in-a-box/life-in-a-box.component';
+import { BoxRowComponent } from './box-row/box-row.component';
+import { BoxComponent } from './box/box.component';
 
 const Router = RouterModule.forRoot([{path: '', component: HomeComponent}], {useHash: true});
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LifeInABoxComponent,
+    BoxRowComponent,
+    BoxComponent
   ],
   imports: [
     BrowserModule,

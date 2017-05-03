@@ -1,0 +1,9 @@
+.row {
+	/*overflow-x: scroll;*/
+	white-space: nowrap;
+}
+
+.year{
+	display: inline-block;
+	width: 15px;
+}
