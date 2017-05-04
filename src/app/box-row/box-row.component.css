@@ -5,5 +5,9 @@
 
 .year{
 	display: inline-block;
-	width: 15px;
+	width: 50px;
+}
+
+.current {
+	color: red;
 }

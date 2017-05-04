@@ -10,8 +10,9 @@
 <input type="date" name="birthday" formControlName="birthday"><br>
 <!--{{birthday}}-->
 <label>Up to what age will you live? (Avg human life span 80)</label>
-<input type="number" name="lifeExpectancy" formControlName="lifeExpectancy" min="18">
+<input type="number" name="lifeExpectancy" formControlName="lifeExpectancy" min="18" max="100">
 	<button type="submit">Submit</button>
 </form>
-
-<life-in-a-box></life-in-a-box>
+{{form.controls.birthday.value}}
+<!--<life-in-a-box></life-in-a-box>-->
+<life-in-a-box [birthday]="form.controls.birthday.value" [lifeExpectancy]="form.controls.lifeExpectancy.value"></life-in-a-box>

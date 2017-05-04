@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BoxRowComponent implements OnInit {
 	@Input() year: number;
+	@Input() age: number;
 	@Input() numOfBoxes: number;
 	public numOfBoxesArray: number[];
 
@@ -14,7 +15,7 @@ export class BoxRowComponent implements OnInit {
 
   ngOnInit() {
 	  this.numOfBoxesArray = Array(this.numOfBoxes).fill(1).map((val, index)=>{
-		  return index + 1;
+		  return index;
 	  });
   }
 

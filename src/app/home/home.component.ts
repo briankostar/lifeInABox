@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { LifeInABoxComponent } from "../life-in-a-box/life-in-a-box.component";
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,11 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class HomeComponent implements OnInit {
 	public form:FormGroup;
+	@ViewChild(LifeInABoxComponent) lifeInABox:LifeInABoxComponent;
 
   constructor(fb:FormBuilder) {
   	this.form = fb.group({
-  		"birthday": '2089-11-18',
+  		"birthday": '1990-01-01',
   		"lifeExpectancy": 80
 	})
   }

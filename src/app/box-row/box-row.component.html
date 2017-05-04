@@ -1,5 +1,5 @@
 <!--number <box></box>-->
 <div>
-	<span class="year">{{year}}:</span>
+	<span class="year" [class.current]="age === year">age {{year}}:</span>
 		<box *ngFor="let boxNum of numOfBoxesArray"></box>
 </div>
