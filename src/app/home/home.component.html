@@ -5,4 +5,13 @@
 <!--component that takes 'minutes', 'hours', 'days', 'weeks', 'months', 'years' as argument and build a box chart-->
 <!--scaling is an issue.. 356 * 90 will be a problem. having fake scroll with replaced dom nodes seems to the the only way but will need research-->
 
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<label>Enter your birthday:</label>
+<input type="date" name="birthday" formControlName="birthday"><br>
+<!--{{birthday}}-->
+<label>Up to what age will you live? (Avg human life span 80)</label>
+<input type="number" name="lifeExpectancy" formControlName="lifeExpectancy" min="18">
+	<button type="submit">Submit</button>
+</form>
+
 <life-in-a-box></life-in-a-box>
