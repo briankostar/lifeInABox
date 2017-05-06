@@ -1,5 +1,5 @@
 <!--number <box></box>-->
 <div>
 	<span class="year" [class.current]="age === year">age {{year}}:</span>
-		<box *ngFor="let boxNum of numOfBoxesArray"></box>
+		<box *ngFor="let boxNum of numOfBoxesArray; let i = index;" [index]="i" [class.highlight]="age === year && currentWeek === (i + 1)"></box>
 </div>

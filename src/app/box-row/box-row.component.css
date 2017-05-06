@@ -11,3 +11,9 @@
 .current {
 	color: red;
 }
+
+.highlight {
+	background: red;
+
+	border: 1px solid red;
+}
