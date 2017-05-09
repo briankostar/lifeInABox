@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'box-row',
   templateUrl: './box-row.component.html',
   styleUrls: ['./box-row.component.css']
 })
-export class BoxRowComponent implements OnInit {
+export class BoxRowComponent implements OnInit, OnChanges {
 	@Input() year: number;
 	@Input() age: number;
 	@Input() numOfBoxes: number;
@@ -21,8 +21,13 @@ export class BoxRowComponent implements OnInit {
 	  });
 	  this.currentDate = new Date();
 	  this.currentWeek = this.getWeek();
-	  console.log('this.currentDate', this.getWeek());
+	  // console.log('this.currentDate', this.getWeek());
   }
+
+	ngOnChanges(changes: any) {
+  		console.log('input on box-row changed:', changes);
+	}
+
 
   	//NOTE: there may be error as # weeks in a year can technically be 52-53 depending on which day Jan 1st is. So.. there could be 53 week boxes /year.
 	getWeek() {

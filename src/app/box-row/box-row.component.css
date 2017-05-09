@@ -9,11 +9,10 @@
 }
 
 .current {
-	color: red;
+	/*color: red;*/
 }
 
-.highlight {
-	background: red;
-
-	border: 1px solid red;
+:host /deep/ .highlight .box{
+	background: purple;
+	border: 1px solid purple;
 }

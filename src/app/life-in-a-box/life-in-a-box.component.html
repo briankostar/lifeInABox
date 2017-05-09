@@ -1,11 +1,6 @@
 <div class="life-in-a-box" >
 	{{time}}
-	<!--<box-row *ngFor="let num of arr(numOfBoxRows).fill(1);" [number]="num"></box-row>-->
-	<!--<box-row *ngFor="a of [1,2,3,4];">{{a}}  </box-row>-->
 	<box-row *ngFor="let year of numOfBoxRowsArray; let i = index;" [year]="year" [numOfBoxes]="numOfBoxes" [age]="age"></box-row>
 
-	<ul>
-		<!--<li *ngFor="let item of items; let i = index;">{{i}}{{item}}</li>-->
-	</ul>
 </div>
 

@@ -49,17 +49,17 @@ export class LifeInABoxComponent implements OnInit, OnChanges{
   }
 
   test(){
-  	console.log('yo test success!')
+  	// console.log('yo test success!')
   }
 
 	ngOnChanges(changes: any) {
 		// changes.prop contains the old and the new value...
-		console.log('changes', changes);
+		// console.log('changes', changes);
 		if(changes.birthday){
 
-			this.age = 30;
-			var a = this.getAge(changes.birthday.currentValue)
-			console.log('age!', a);
+			// this.age = 30;
+			this.age = this.getAge(changes.birthday.currentValue)
+			// console.log('age!', a);
 		}
 		if(changes.lifeExpectancy){
 

@@ -3,7 +3,18 @@
 	display: inline-block;
 	width: 10px;
 	height: 10px;
-	margin: 2px;
+	/*margin: 2px;*/
+}
+
+:host(.highlight) .box{
+	background: red;
+	border: 1px solid red;
+}
+
+:host-context(.highlight) .box{
+
+	background: blue;
+	border: 1px solid blue;
 }
 
 /*.highlight {*/
