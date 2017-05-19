@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LifeInABoxComponent } from './life-in-a-box/life-in-a-box.component';
 import { BoxRowComponent } from './box-row/box-row.component';
 import { BoxComponent } from './box/box.component';
+import { ViewSelectorComponent } from './view-selector/view-selector.component';
 
 const Router = RouterModule.forRoot([{path: '', component: HomeComponent}], {useHash: true});
 
@@ -18,7 +19,8 @@ const Router = RouterModule.forRoot([{path: '', component: HomeComponent}], {use
     HomeComponent,
     LifeInABoxComponent,
     BoxRowComponent,
-    BoxComponent
+    BoxComponent,
+    ViewSelectorComponent
   ],
   imports: [
     BrowserModule,

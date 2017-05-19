@@ -8,6 +8,7 @@ import { LifeInABoxComponent } from "../life-in-a-box/life-in-a-box.component";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+	public viewType: string = 'weeks';
 	public form:FormGroup;
 	@ViewChild(LifeInABoxComponent) lifeInABox:LifeInABoxComponent;
 
@@ -23,6 +24,11 @@ export class HomeComponent implements OnInit {
 
 	onSubmit() {
 		console.log( 'form submitted', this.form )
+	}
+
+	setView(newView: string){
+  		console.log('got this event!', newView);
+		this.viewType = newView;
 	}
 
 }

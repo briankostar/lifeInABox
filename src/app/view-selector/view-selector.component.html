@@ -1,0 +1,6 @@
+<div>
+	<select [(ngModel)]="viewType" (ngModelChange)="emitView()">
+		<option *ngFor="let view of viewSelection" [ngValue]="view.value">{{view.text}}</option>
+	</select>
+</div>
+{{view}}
